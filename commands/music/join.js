@@ -9,8 +9,8 @@ module.exports = {
 
 module.exports.run = async (bot, msg) => {
 	if(msg.member.voiceChannel){
-        msg.member.voiceChannel.join()
+        msg.member.voiceChannel.join();
 	}else{
-		msg.channel.send("You aren't in a voice channel")
+		return bot.cmdError("You aren't in a voice channel");
 	}
 }
